@@ -60,3 +60,5 @@ grouped_data = train_test_activity %>%
     group_by(activity, participantID) %>% 
     summarise_all(mean)
 
+## create output
+write.table(grouped_data, "Assignment_Output.csv", sep=",", col.names=T, row.names=F, quote=F)
